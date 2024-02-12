@@ -1,0 +1,130 @@
+Spring
+
+why spring bacame popular?
+rod johnson rasied a question, why are we doing java like this.. and he introduced spring.
+
+**spring helps java developers in agile development by providing proxy objects and eliminates dependencies aross project
+
+create maven project and add 'spring-core' and 'spring-context' dependencies
+
+IOC - inversion of control -> making low level items to depend on high level items
+
+in the world there are 3 but spring supports 2 types of injections
+1. setter injection
+2. constructor injection
+----------
+
+setter injection
+- a class must have a setter method to inject an object into it.
+
+public class B{
+A a; // in java it is an instance variable,,, but in spring.. this is no more an instance variable,, this is a dependency
+public void setA(A a){ this.a = a;}
+}
+
+
+BeanFactory interface 
+- a root interface for accessing Spring bean container
+
+DTD - Document Type Definition
+- it is going to validate XML file
+
+spring says,, give me all the beans in beans.xml file,, then i'll bring you all dependencies
+
+https://docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html#:~:text=When%20you%20create%20a%20bean,instances%20from%20a%20single%20recipe.
+
+**one of the main feature of spring is Autowiring, 
+which is introduced first time in programming where the container will detect the dependency and automatically inject
+
+autowire type - https://www.tutorialspoint.com/spring/spring_beans_autowiring.htm#:~:text=Autowiring%20by%20property%20datatype.,beans%20name%20in%20configuration%20file.
+
+byName, byType autowiring use set method of the class
+
+Can we instantiate one class two times in beans.xml? if so will it still be singleton? 
+if we get byName with different names then yes it is possible..
+if we take byType, then it is not possible
+
+xml based cofigurations are not used nowadays...
+everything became annotation based...
+
+@component indicates it is a special type of annotation to mention that spring will provide something to the class
+@service
+@repository
+@controller
+
+
+DTD became older..
+later.. 'XML schema' cmae to validate XML documents
+
+----------------------
+Spring MVC - is a architechtural pattern and not a design pattern
+
+challenges will be faced if our servlet containers..
+-> contain business logic
+-> presentation login
+-> request processing logic
+
+MVC is all about decoupling these three layers
+
+Controller 
+-> directly or indirectly a servlet
+-> request from web hits the controller first
+
+Model 
+-> makes changes and stores values 
+-> this has business logic and data access logic also will have state of objects
+-> model is like Entity in hibernate
+
+View
+-> we build view with the help of data from the model
+
+https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/mvc.html
+
+Dispatcher servlet is the front controller of the application
+
+interceptors or preprocessors will execute common logics for all the code
+Simple and Straightforward
+
+What?
+Interceptor is a components which intercets request so that you can perform some task before and after request reaches its handler
+
+How to use it?
+Implement HandlerInterceptor annotate it with “@Component”. Spring will autodetech it from scaning pacakage
+You can define in xml configuration also.
+
+------------------------
+
+
+spring supports injection of objects to its parent interface
+
+good way of software development si to create an iterface first and a concrete class for it
+
+ApplicationContext 
+- in enterprise applciations, context is where bindings happen
+- it is going to create a cintainer more powerfull than bean container.. and ninds all beans in side the container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

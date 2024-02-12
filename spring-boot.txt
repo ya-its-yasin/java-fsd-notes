@@ -1,0 +1,37 @@
+Sprin + embeded server - XML configurations = Spring  boot
+
+learn these in free time -> https://spring.io/projects
+
+we face many Nighmares while using spring..
+-> tomcat serer causes nightmare in few cases
+-> POM file dependencies and versions resolving by maven may cause a very critical issues sometimes
+-> database dependencies and related operations
+-> XML language
+
+spring has learnt everything with java, and it produced spring boot
+
+spring boot become very famous because of this main reason, it became made for each other with  'Microservices'
+
+spring starter -> https://start.spring.io/
+
+ultimately, spring boot is also a DispatcherServlet only, which handles all the servlets and containers
+
+we can get to know the health of each and every bean.
+
+****IMP***** -> https://www.jrebel.com/blog/spring-annotations-cheat-sheet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
