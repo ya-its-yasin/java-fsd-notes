@@ -1,0 +1,122 @@
+Client sends request it goes to server..
+web container uses web.xml to check this request can be sent to which servlet insiide the application..
+then the servlet is called.. 
+it creates new child thread for every request..
+it finishes process and returns response.
+
+Http has 5 methods
+GET, POST, PUT, DELETE, OPTIONS
+
+if we didn't mention anything in the form, default it will take GET method
+
+HttpServletRequest
+-> request from client to server
+-> with all the input data needed for the calculation
+
+HttpServletResponse
+-> is the response from server to client
+-> we can send in any format html, txt, video etcetc
+
+Both req and res objects are created by tomcat
+
+all request goes to service() method and then forwarded to doGet or doPost etc...
+
+request.getParamater() -> gives values from the request URL
+request.getAttribute(), setAttribute() -> used to pass values from one from first servlet to another 
+
+we can forward request from one servlet to another by 2 ways
+1. RequestDispatcher -> rd.forward()
+2. res.sendRedirect() -> this is also called URL rewriting
+
+Session
+-> HttpSession can be used throughout the request ends
+-> We can use it to store more values
+-> session object is part of to Request object
+
+Cookies
+-> Cookies can be created by using 
+-> get or add the cookies to client
+
+ServletContext
+-> is an object that will be shared for all servlets
+-> we can add values in the web.xml file and it can be used in any servlet
+	<context-param>
+	<param-name>name</param-name>
+	<param-value>yasin</param-value>
+	</context-param>
+
+@Annotations
+-> very powerfull and easy to use instead of xml configurations
+
+JSP - Java Server Page
+-> this can be used when we want to write some java code inside an html file
+-> form action="add.jsp" -> this send the form data to the JSP file instead fo any servlet
+
+Scriptlet:
+-> write all java code inside <% blah blah %>
+-> JSP is simpler than servlet too. we dont have to import things, we dont have to create methods, request object response object etcetc..
+-> JSP turns into a servlet and runs when the application is running.
+-> all the java code in JSP will be moved under service() method and it works like a servlet
+
+what if we want to put data outside a service method?
+Declaration:
+<%! blah blah %> -> java code inside this section is called declaration 
+-> the java code inside this section will go inside the servlet class outside the service method.
+-> we can create global variables, we can create additional methods too.
+
+Directive:
+<%@ page import="java.util.Date" %>
+-> @page, @include -> incldue another jsp file in our page, @taglib -> if we need to use external tags
+-> used to write import statements in JSP file and transfered to its servelet
+-> this tag is called directive
+
+Expression:
+<%= k%> -> values inside this wil go into out.print() method.
+-> its like a direct output
+
+Builtin Object provided by JSP ( can be used in Scriptlet and Expression )
+1. request
+2. response
+3. pageContext
+4. out (PrintWriter object)
+5. session
+6. application (ServletContext object)
+7. confiig (ServletConfig object)
+
+Exception Handling in JSP:
+-> exceptions can be handled in traditional try catch way.. or
+-> the error can be forwarded to another jsp file dedcated for errors
+-> errorPage="error.jsp" -> will forward the control to error.jsp file if any error occurs in the current jsp file
+-> and create a error.jsp file and add tag element isErrorPage="true"
+-> then there will be an object 'exception' specially for error pages
+
+JDBC in JSP:
+-> do all connection blah blah like java inside a scriptlet
+
+JSTL - JSP Standard Tag Library
+-> used to convert java code to HTML kind of code for designers to make changes
+-> ${variablename} -> gives values of java vairable
+-> we can use java feature from tags by importing JSTL library from Directive sesntion and us it like below
+<C:out value="${variablename}" /> -> this is out tag  
+-> we have JSTL libraries for core, sql, functions etc.
+-> ${fn.length(str)} -> gives length of string str
+
+The thing is, we can do many things in JSP with the help of java.
+
+
+->managing login session using servlets and JSP:
+HttpSession session = request.getSession();
+session.addAttribute("username", "yasin");
+and then pass control or redirect to other pages..
+then finally when logging off..
+session.removeAttribute("username");
+session.invalidate();
+tada.....
+
+**how to prevent back button after logout:
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate")
+this lets the browser not to save this JSP file in tha cache and will not able to show the page when clicked back button.
+simple...
+
+
+-1

@@ -1,0 +1,129 @@
+Hibernate is a very goood ORM.
+
+Hibernate acts as a layer between java and database.
+Hibernate uses JDBC internally and provides us easier way to work with databases.
+
+We can create a POJO class and mark with annotation @Entity to make this class as a table in the database.
+@Id annotation on a variable will make it as a primary key column in the table.
+
+Automatically creates table from a class, with all variable names as column name and class name as table name.
+
+Hibernate.cfg.xml file under the src/main/resources folder will have the details regarding database url, username, password and all class/Entities which are linked with database tables.
+
+Listed the below steps to use hibernate in our class.
+
+//step 1 -> create and configure the config object
+Configuration config = new Configuration();
+config.configure();
+
+// step 2 -> session factory
+SessionFactory factory = config.buildSessionFactory();
+		
+//step 3 -> creating session from factory
+Session session = factory.openSession();
+		
+//step 4 -> create transaction object
+Transaction tr = session.beginTransaction();
+		
+//step 5 -> create objects to insert in the database
+Investor i1 = new Investor();
+i1.setName("Yasin");
+i1.setAmount(45000);
+		
+//step 6 -> save object into session
+session.save(i1);
+		
+//step 7 -> commit transaction
+tr.commit();
+		
+Query<Investor> query = session.createQuery("select i from Investor i");
+List<Investor> list = query.list();
+Iterator<Investor> iter = list.iterator();
+while(iter.hasNext())
+{
+	System.out.println(iter.next());
+}
+		
+//step 8 -> close session
+session.close();
+		
+---------------------------------------
+
+Annotations:
+-> @Entity(name="alien_table") -> changes entity name and table name too in the DB
+-> @Entity \n @Table(name="alien_table") -> changes db table name alone and not Entity name in java
+-> @Column(name="alien_column") -> yeah you know now..
+-> @Transient -> prevents a column not to be stored in DB
+
+--------------------------------------
+
+@Embedable 
+-> this allows us to have another java class with few columns as  one of the object inside our main table class.
+
+@Entity
+class Student{
+	int id;
+	AlienName name;
+	int age;
+}
+
+@Embedable
+class AlienName{
+	String fname;
+	String lname;
+}
+
+This makes table 'Student' with columns id,fname,lname,age.
+
+----------------------------------
+
+@OneToOne, @OneToMany, @ManyToOne, @ManyToMany
+-> these are used to map relations between two tables
+-> this is a very interesting handson
+@OneToOne(mappedBy="column-name-of-tableB")
+
+by default, the fetching type is LAZY, there is one more called EAGER.
+-> this LAZY fetch value only when we need it
+
+@oneToMany(mappedBy="alien", fetch=FetchType.EAGER)
+-> set the fetch type to eager, and it loads in advance
+
+------------------------
+
+Hibernate Chaching
+-> if we fire same select query in same session, then hibernate provides first level chaching, by default given by hibernate
+-> this gets stored in session.
+-> if another user or another session comes.. then we should go for second level chaching using 3rd party apps.
+-> 'ehChache' is a 3rd party chaching library from mvn central
+-> add these dependency and few changes in POM and hybernate.cfg.xml
+
+Entitiy should have annotation of @Chachable and
+@Chache(usage=ChacheConcurrencyStrategy.READ_ONLY) //there are 5 strategies
+-> None
+-> NONSTRICT_READ_WRITE
+-> READ_ONLY
+-> READ_WRITE
+-> TRANSACTIONAL
+
+<property name="hibernate.cache.use_query_chache">true</property>
+
+Query q1 = session1.createQuery("from Alien where aid=101");
+q1.setChachable(true);
+q1.uniqueResult();
+
+--------------------------------------
+
+Hibernate entity lifecycle is explained in an image attached in drive.
+
+session.get(Laptop.class,1) -> will fire select query at this line
+session.load(Laptop.class,1) -> will not fire this select query untill it is used in the code somewhere in the future.
+
+JPA is like and interface..
+hibernate.. ibitis etc etc are its implementaions..
+
+if we write our project with hibernate, and if we wanted to shift to ibitis or any other.. then we need to change all codes related to hibernate..
+
+if we writ project using JPA stuff, we can easily shift from hibernate to ibitis or any other by just changing the dependency in POM.xml file..
+thats it...
+
+-1

@@ -1,0 +1,107 @@
+Git 
+
+Version Contol System (VCS)
+- controlling versions/history of the project while development
+- but only in local..
+- cannot collaborate..
+- if systemm crashes..all data gone. 
+
+VCS + Collaboration = Centralized Version Control System
+- a central repo which can be accessed by many people.
+- project will be in a central server
+- if the server crashes.. data gone..
+
+Distribiuted Version Control System
+- we have a server copy, we have a local copy etc..
+
+Git started in 2005
+
+-set credentials in local
+git config --global user.name "yasin"
+git config --global user.email "something@gmail.com"
+
+working directory -> has all files in file system
+staging area -> here is wr git knows which files to track and others to ignore
+untracked area -> files that we dont want to track
+commit histroy -> 
+
+**working dir is different from Git repo
+
+git init 
+-> will create an empty git repo in the current folder/working dir
+-> git init -b main -> creates a git repo with branch name as 'main' instead of master
+
+git status
+-> shows the current status and list of untracked fules, staging files and files under commit.
+-> it shows the list of files having changes or additions or deletions
+
+git add
+-> git add FileName.txt -> adds this file too staging area, (i.e) this file will be tracked by git
+-> git add . -> adds all files under untracked ares to staging area
+
+git commit
+-> commit early, commit often
+-> git commit -m "commit message" -> commit done.. 
+
+git log
+-> shows all the list and details of commits done on this repo 
+-> git log --pretty=oneline -> shows all commits and commit message in list of oneliners..
+
+git commit -a -m "my third commit without staging"
+-> this '-a' helps us to skip the staging area and commit directly
+
+git diff
+-> shows the list of files along with the contents which are changed in the files
+-> this works for modified under intracked area..
+-> git diff --staged -> shows if the list and contents of changes under staging area
+
+git clone
+-> we know.. it just clones online repo to local machine
+
+ssh-keygen -o
+-> creates a SSH connection from local machine 
+-> this is used only once in a machine
+
+git remote add origin git@github.com:ya-its-yasin/teluscotest.git
+-> creates connection with local repo to online repo
+
+git push -u origin main
+-> yeah you know.. it pushes code form local to online repo
+-> git push -> is enough in most cases
+-> 'origin' represents the connection url (i.e) the SSH or HTTPS url that we used in add remote command
+
+Tag
+-> tag is a version number
+
+git tag
+-> shows the list of tags in the current repo
+
+git tag -a v1.0 -m "first release"
+-> command helps to create a tag with version name v1.0 at this current state of the repo
+
+git pish origin v1.0
+-> command to push tags from local to remote repo
+
+git checkout -b feature1
+-> creates a new branch in local using CMD
+-> git switch -c feature2 -> is new version for checkout command
+-> git switch/checkout feature1 -> moves to the existing branch
+
+git branch
+-> lists all the branches of this repo
+
+git branch -d feature2
+-> deletes a branch
+
+git pull
+-> brings online github changes to local repo folder
+
+
+
+
+
+
+
+
+
+
