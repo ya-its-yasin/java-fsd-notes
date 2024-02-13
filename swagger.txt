@@ -1,0 +1,3 @@
+swagger allows you to describe structure if API so that machines can read them.
+
+need to learn on internet

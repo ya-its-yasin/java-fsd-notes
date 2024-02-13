@@ -1,0 +1,43 @@
+Project 2: Building an Automated Investment Portfolio Management System
+1. Introduction:
+Investment portfolio management is crucial for individuals and organizations to optimize their financial assets and achieve their investment goals. However, manual portfolio management processes are often time-consuming, error-prone, and lack real-time insights. Our project aims to develop an Automated Investment Portfolio Management System using Java Full Stack technologies to address these challenges.
+2. Problem Description:
+Traditional investment portfolio management involves manual tracking of asset allocations, rebalancing, and performance analysis, which can be inefficient and prone to human error. Additionally, lack of real-time insights and analytics hinders informed decision-making. Our project seeks to automate these processes, providing users with a robust platform for managing their investment portfolios efficiently and effectively.
+3. Objectives:
+●	Develop an intuitive web-based application for managing investment portfolios.
+●	Implement automated asset allocation and rebalancing algorithms to optimize portfolio performance.
+●	Provide real-time insights and analytics on portfolio composition, performance, and risk.
+●	Enable users to set investment goals, and risk preferences, and monitor progress towards achieving them.
+●	Integrate with external financial data sources for accurate and up-to-date market information.
+4. Scope of Work:
+The project will include the following key features:
+●	User registration and authentication: Investors can register and securely log in to access portfolio management services.
+●	Portfolio creation and customization: Users can create personalized investment portfolios based on their goals and risk preferences.
+●	Asset allocation and rebalancing: Automated algorithms will optimize portfolio asset allocation and periodically rebalance to maintain desired targets.
+●	Performance analytics: Provide detailed insights into portfolio performance, including returns, volatility, and historical performance.
+●	Risk assessment: Evaluate portfolio risk metrics and provide recommendations for risk management strategies.
+●	Integration with financial APIs: Retrieve real-time market data for accurate portfolio valuation and analysis.
+5. Technologies:
+The project will be developed using Java Full Stack technologies, including:
+●	Frontend: HTML, CSS, JavaScript, Angular/React/Vue.js for building the user interface.
+●	Backend: Java, Spring Boot for RESTful API development, Hibernate for database interaction.
+●	Database: MySQL/PostgreSQL for storing user profiles, portfolios, transactions, and market data.
+●	Security: OAuth for authentication, HTTPS for secure communication, and encryption algorithms for data protection.
+6. Deliverables:
+●	Functional Automated Investment Portfolio Management System with all specified features implemented.
+●	User documentation and guides for seamless onboarding and usage.
+●	Source code repository with version control (e.g., Git) for collaboration and future enhancements.
+7. Project Timeline:
+The project will be executed in multiple phases, including:
+●	Requirements gathering and analysis.
+●	Designing the system architecture and database schema.
+●	Implementation of frontend and backend modules.
+●	Integration with external financial APIs and testing.
+●	User acceptance testing and feedback incorporation.
+●	Deployment and maintenance phase
+
+
+-----------------------------------------------------------------------
+
+
+https://www.g2.com/categories/investment-portfolio-management
