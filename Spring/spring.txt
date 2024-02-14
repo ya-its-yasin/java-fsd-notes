@@ -7,6 +7,55 @@ rod johnson rasied a question, why are we doing java like this.. and he introduc
 
 create maven project and add 'spring-core' and 'spring-context' dependencies
 
+-> we create an object Alien obj.
+Alien obj = new Alien();
+-> no please.. we dont want to handle it..
+how?
+-> Dependency Injection or IOC -> Inversion Of Control
+-> by asking spring to create object of this class.
+
+getBean(); 
+-> is responsible to give object.
+-> this method belongs to an interface.
+-> then it should belong to some library..
+-> that library is called 'spring-context'
+
+// creating a context mothod to get all beans from the beans.xml file
+ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml"); 
+
+-> this will give us an ApplicationContext
+-> this is a spring container
+-> its responsibilities to create objects..
+-> creates objects of classes which are mentioned as bean in the xml file..
+
+<!-- bean definitions here -->
+<bean name="alien" class="com.tcs.ioc.Alien"> </bean>
+
+Alien obj1 = (Alien) context.getBean("alien");
+Alien obj2 = (Alien) context.getBean("alien");
+
+-> in both refrences, we get same instance of A
+-> this default behaviour is called singleton
+-> we can avoid this and get different instances by setting this property as prototype.
+
+<bean name="alien" class="com.tcs.ioc.Alien" scope="singleton/prototype" ></bean>
+
+-> object is created by spring..
+-> that means the constructor will be called by spring
+-> we can set default value to those object by giving them in the xml itself
+
+<bean name="alien" class="com.tcs.ioc.Alien" scope="singleton/prototype" >
+<propperty name="age" value=10> </property> </bean>
+
+
+in the world there are 3 but spring supports 2 types of injections
+1. setter injection
+2. constructor injection
+
+refer this project for a good idea about this concept
+-> https://github.com/ya-its-yasin/Java-FSD/tree/main/day8-springioc/src/main/java/com/tcs/ioc
+
+
 IOC - inversion of control -> making low level items to depend on high level items
 
 in the world there are 3 but spring supports 2 types of injections

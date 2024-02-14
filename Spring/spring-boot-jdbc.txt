@@ -1,0 +1,18 @@
+spring boot jdbc
+
+-> JdbcTemplate belongs to org.springframework.jdbc.core.JdbcTemplate
+
+@Autowired
+private JdbcTemplate template;
+
+String sql = "insert into alien values (?,?,?);"
+template.update(sql, valueA, valueB, valueC);
+
+RwoMapper<Alien> mapper = new RowMapper<Alien>(){
+	@Override
+	public Alien mapRow(ResultSet rs, int rowNum){
+		
+	}
+}
+String sql2 = "select * from alien";
+template.query(sql,)
