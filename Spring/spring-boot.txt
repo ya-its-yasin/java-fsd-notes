@@ -20,6 +20,12 @@ we can get to know the health of each and every bean.
 
 ****IMP***** -> https://www.jrebel.com/blog/spring-annotations-cheat-sheet
 
+what is @SpringBootAPpplication annotation?
+-> it is combination of
+	-> @SpringBootConfiguration
+	-> @EnableAutoConfiguration
+	-> @ComponentScan
+
 
 
 
