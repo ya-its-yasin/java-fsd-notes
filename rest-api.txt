@@ -34,6 +34,43 @@ src/main/java
 
 
 
+refer -> https://httpstatuses.io/
+-> for types of response
+1×× Informational
+2×× Success
+3×× Redirection
+4×× Client Error
+5×× Server Error
+
+
+@ResponseStatus(code= HttpStatus.CREATED)
+-> can be used to change the response code to the client
+
+-> and another way to do it
+return ResponseEntity.status(HttpStatus.ACCEPTED).body("Successfully updated");
+
+refer-> https://github.com/ya-its-yasin/java-fsd-sts/blob/main/day12-rest-api/src/main/java/com/tcs/rest/resources/ProductResource.java
+
+Builder design pattern
+-> while creating an obejct with values, we need to pass values to constructor
+-> we should pass them in an order mentioned in the constructor
+-> this is a briden if there is a huge number of parameters..
+-> to solve this, we got builder design pattern,
+-> which allows us to set values of each paramaters in any order
+-> it looks like setter + method-chaining
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
