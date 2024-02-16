@@ -1,0 +1,5 @@
+1. swagger
+2. RestTemplae
+3. lombok
+4. microservices -> Eureka things
+

@@ -1,0 +1,67 @@
+refernence -> https://spring.io/microservices
+-> https://www.theknowledgeacademy.com/in/offers/lean-six-sigma-certification-training-courses/
+
+
+-> Monolithic application was veryy big and hard to maintain.
+-> micro service is all about breaking a large applciation into pieces of separate manageable small applications
+-> mircroservices support polyglot development - > https://www.techtarget.com/searchsoftwarequality/definition/polyglot-programming
+
+-> eureka server is a design pattern for registry
+-> eureka dsicovery client is needed for the microservices to register themselves to the registry
+-> every service will be running in seperate port
+	-> service registry always listens on port 8761 
+	
+
+-> if you want to bring a micorservice to cloud, we have to follow these 12 factors
+	-> https://12factor.net/
+
+-> eureka means, it has a register, which has all services
+-> to which all other microservices will resgister and work with
+
+-> take a look at YAML -> https://yaml.org/
+
+@Value("name") -> injects value from yml or properties to java class 
+
+-> once a rest service ie created, it can be called by browser from outside..
+-> after testing. we'll put restriction of it should be called only from api gateway or something
+
+-> eureka server should run first
+-> eureka client apps must be run after this and it will show all the client instances in the home screen of eureka server
+
+
+-> for java people microcservices means-
+	-> it is spring boot
+	-> it us rest api
+	-> it is a microservices
+
+-> if a microservice is called as cloud ready,
+-> we should externalize the configurations ffrom application.properties to an external server,
+-> which is common and can be used in many microservices
+-> this is called open close principle
+-< it states that anything that changes in the application should be externalized
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

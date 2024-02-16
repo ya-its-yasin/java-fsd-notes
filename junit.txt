@@ -1,0 +1,39 @@
+Any method annotated with @Test is run by Junit by jre
+
+TDD -> test driven development
+
+the fater you learn TDD and add it in your resume,, it is very powerfull
+
+
+@BeforeAll
+
+@BeforeEach
+
+@AfterAll
+
+@AfterEach
+
+study Junits somewhere
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

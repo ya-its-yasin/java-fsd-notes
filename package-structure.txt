@@ -1,0 +1,29 @@
+src
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── yourcompany
+│   │           └── yourproject
+│   │               ├── config              // Configuration classes
+│   │               ├── controller          // REST controller classes
+│   │               ├── dto                 // Data Transfer Object classes
+│   │               ├── exception           // Custom exception classes
+│   │               ├── model               // Entity and domain model classes
+│   │               ├── repository          // Repository interfaces
+│   │               ├── service             // Service classes
+│   │               ├── util                // Utility classes
+│   │               └── YourProjectApplication.java  // Main Spring Boot application class
+│   └── resources
+│       ├── static           // Static resources (e.g., CSS, JavaScript)
+│       ├── templates        // HTML templates (if using server-side rendering)
+│       ├── application.properties   // Spring Boot application properties
+│       └── META-INF         // META-INF resources
+└── test
+    └── java
+        └── com
+            └── yourcompany
+                └── yourproject
+                    ├── controller       // Unit and integration tests for controllers
+                    ├── repository       // Unit and integration tests for repositories
+                    └── service          // Unit and integration tests for services
+
