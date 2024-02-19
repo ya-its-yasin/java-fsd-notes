@@ -1,0 +1,39 @@
+
+Angular is a library developed by google
+
+previously.. people use.. 
+html css js jquery ajax etc etc etc.. 
+many things in many ways in their own way...
+without a framework...
+with angular... every front end development standardized
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
