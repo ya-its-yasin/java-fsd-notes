@@ -5,9 +5,29 @@ previously.. people use..
 html css js jquery ajax etc etc etc.. 
 many things in many ways in their own way...
 without a framework...
-with angular... every front end development standardized
+with angular... every front end development standardized..
+
+DOM is one imp library for markup languages
+-> https://www.w3schools.com/js/js_htmldom.asp
+
+common code usefull for multitple components,, we should put in service
 
 
+ng new test-app -> creates an angular app
+ng serve -> starts the application in port 4200
+
+
+productService.saveProduct(this.product).subscribe( (data) => { console.log }, error=> console.log(error));
+
+saveProduct(product: Product): Observable<Object>{
+return this.http.post("http://localhost:8080/product/v1/create/", product); 
+}
+
+
+Angular supports only constructor injection
+
+build fron end in this format
+Model -> service -> component(is like controller)
 
 
 
