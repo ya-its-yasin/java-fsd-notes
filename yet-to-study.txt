@@ -3,3 +3,4 @@
 3. lombok
 4. microservices -> Eureka things
 5. logging
+6. design pattern

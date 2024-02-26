@@ -1,0 +1,5 @@
+
+LDAP
+-> lightweight Directory some protocol
+
+
