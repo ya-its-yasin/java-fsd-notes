@@ -3,4 +3,11 @@
 3. lombok
 4. microservices -> Eureka things
 5. logging
-6. design pattern
+6. design patterns
+
+certifications:
+1. oracle java certification
+2. testing 
+3. agile related certificats
+4. IBM uml certificates
+5. togaf architect certificates
