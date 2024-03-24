@@ -26,8 +26,33 @@ what is @SpringBootAPpplication annotation?
 	-> @EnableAutoConfiguration
 	-> @ComponentScan
 
+@ComponentScan defines that this is the current package, and scan all the subpackages to the springboot
+
+if we create a package other than the main package, then it will be ne scanned and bean will not be created..
+to resolve this, we have tyo mention the packages list like below
+
+@SpringBootApplication(
+scanBasePackages= {
+	"com.tcs.yasin",
+	"com.tcs.main"
+})
 
 
+@Qualifier
+
+-> if we have multiple implemenmtations of a class and all of them are beans..
+-> if we try to create bean of teh interface, then spring will confuse which one to use..
+-> we can specify this by using @Qualifier annotation
+-> we have interface Coach, and we have implementations classes like FootballCoach, TennisCoach, etcetc..
+
+public DemoController(@Qualifier("tennisCoach") Coach coach){
+	myCoach = coach;
+} 
+
+@Primary
+
+another way to handle this confusion is.. by setting one of the implementation class with @Primary annotation.
+-> yeah... ** you know what it does by seeing the name..
 
 
 

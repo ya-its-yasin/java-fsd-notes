@@ -1,12 +1,31 @@
 Hibernate is a very goood ORM.
 
+Hibernate is a framework for persisting / saving java objects in database.
 Hibernate acts as a layer between java and database.
 Hibernate uses JDBC internally and provides us easier way to work with databases.
+
+benefits of hibernate:
+-> handles all low level sqls for us
+-> minimizes the amount of JDBC in our code
+-> it provides ORM Object-Relational-Mapping
+
+what is JPA?
+-> Jakarta Persistence API previously called as Java persistence API
+-> standard API for ORM
+
+Benifits of JPA?
+-> hibernate is one of the vendor implementation of JPA,
+-> if we want to change the vendor in our code, we can easily change to other
 
 We can create a POJO class and mark with annotation @Entity to make this class as a table in the database.
 @Id annotation on a variable will make it as a primary key column in the table.
 
 Automatically creates table from a class, with all variable names as column name and class name as table name.
+
+
+Entity manager -> use when we need low-level comtrol and flexibility 
+JPARepository -> use when high-level of abstraction
+
 
 Hibernate.cfg.xml file under the src/main/resources folder will have the details regarding database url, username, password and all class/Entities which are linked with database tables.
 
@@ -126,4 +145,12 @@ if we write our project with hibernate, and if we wanted to shift to ibitis or a
 if we writ project using JPA stuff, we can easily shift from hibernate to ibitis or any other by just changing the dependency in POM.xml file..
 thats it...
 
--1
+
+--
+
+
+
+
+
+
+

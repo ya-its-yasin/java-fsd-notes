@@ -1,0 +1,26 @@
+OSI Model -> Open System Interconnection Model
+
+
+
+
+IP address
+-> layer 3 property
+
+if the host is present in same netwrok,
+	it will be sent directly by mac address
+if not,
+	the it will reach gateway or router to find outside
+
+
+
+
+
+
+
+
+
+
+
+
+
+

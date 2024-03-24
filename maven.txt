@@ -1,0 +1,38 @@
+maven
+
+-> Apache Maven is a project maanagement tool
+-> most popular use of maven is for build management and dependencies
+
+what problems does maven solve?
+-> tell maven, the projects that you are working with.. (dependencies / jars)
+-> maven will go to internet and download it and mek it ready during project compliation or run for you
+
+how maven works?
+-> we mention the dependencies in pom file
+-> maven checks or the dependencies in local
+-> if not present, then it goes to maven central repository website and downloads and keeps in the local
+-> and have it ready to use in the project
+
+Maven provides a standard project structure to work with universally.
+
+POM.xml
+-> Project Object Model file
+-> config file present in root of project
+
+POM structure:
+1. project meta data -> project name, version, java version ,jar type etc etc
+2. dependencies
+3. plugins -> additional custom tasks
+
+Project Coordinates
+-> GAV
+-> Group ID, Artifact ID, Version
+
+Group ID -> Name of company or like a package name com.yasin
+Artifact ID -> Name of this project
+Version -> yeah, just the version
+
+mvnw is maven wrapper files 
+-> automatically downloads correct version of mave if not present in the system ad run maven  
+
+

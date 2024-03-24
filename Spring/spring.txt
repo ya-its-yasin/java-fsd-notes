@@ -57,6 +57,11 @@ refer this project for a good idea about this concept
 
 
 IOC - inversion of control -> making low level items to depend on high level items
+-> the approach of outsourcing the constuction and management of objects
+
+Dependency Injection
+-> client deligates to another object the responsibility of providing its dependencies.
+
 
 in the world there are 3 but spring supports 2 types of injections
 1. setter injection
@@ -153,7 +158,34 @@ ApplicationContext
 - it is going to create a cintainer more powerfull than bean container.. and ninds all beans in side the container
 
 
+Lazy initialization
+-> instead of loading all teh beans upfront, we can specify lazy initialization
+-> @Lazy annotation provides a facility that, a bean will be created only if it it requested for DI or it is explicitly requested.
 
+-> can we do this for all our classes?
+-> just use spring.main.lazy-initialization=true in properties file, then all the components in the project will be lazy initialized 
+
+
+Bean scope:
+-> bean scope refers to lifecycle of a bean
+-> how long the bean live? 
+-> how many instances are created?
+-> how is teh bean shared?
+
+default scope if singleton
+options available are..
+-> singleton -> creates only one instance and shares it to whoever requests
+-> protoptype -> gives different copy of bean to each requestor
+-> request -> 
+-> session
+-> global-session
+
+@PostConstruct -> does something once the bean is contructed
+@PreDestroy -> does something before dieing
+
+@Bean
+-> is used to create beans of other library objects like amazon s3 client, where we cannot go and put @Component of top of that class
+-> we can create a @Configuration class and the have a bean inside it and inject the s3 object into our code. 
 
 
 

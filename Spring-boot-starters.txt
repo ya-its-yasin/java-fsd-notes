@@ -1,0 +1,41 @@
+Spring boot starters
+
+-> collection of dependncies grouped together and testetd by spring development team
+-> makes easier to start a project
+-> reduces maven config file
+
+for example,
+adding one starter spring-boot-starter-web gives us
+-> spring-web
+-> apring-webmvc
+-> hibernate-validator
+-> json
+-> tomcat 
+etcetc
+
+
+spring-boot-starter-parent
+-> default maven config- version, etc
+-> spring-boot-starter-* items will inherit from the parent
+
+
+spring-boot-devtools
+-> we know.. we can make changes in code while app is running, and it will auromarically recompile
+
+
+spring-boot-starter-actuator
+-> exposes rest endpoints to monitor the health and manage the metrics of our application.
+-> /health -> gives the service is up or down
+-> /info -> gives info that we give in properties file
+	-> info.app.name=something
+	-> info.app.version=v1
+	-> etcetc
+->/beans -> shows all the beans in our application
+-> and 10+ more endpoinnts available
+
+
+
+
+
+
+
