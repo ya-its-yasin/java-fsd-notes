@@ -1,0 +1,24 @@
+
+sudo su
+
+docker run ubuntu
+
+docker run -ti ubuntu:latest
+
+apt update
+
+docker stop <hashcode>
+
+
+-----------
+
+docker build -t hello-app:1.0 .
+
+docker images
+
+docker run hello-app:1.0
+
+docker run -d -p 9000:3000 express-app:1.0
+
+docker run -p 9000:3000 express-app:1.0 // will block the terminal until the container stops
+ 
