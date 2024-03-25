@@ -25,6 +25,8 @@ Automatically creates table from a class, with all variable names as column name
 
 Entity manager -> use when we need low-level comtrol and flexibility 
 JPARepository -> use when high-level of abstraction
+ 
+knowing both entity manager and jpa repository will be best for a developer.
 
 
 Hibernate.cfg.xml file under the src/main/resources folder will have the details regarding database url, username, password and all class/Entities which are linked with database tables.
