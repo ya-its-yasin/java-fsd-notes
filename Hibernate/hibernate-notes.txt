@@ -148,7 +148,15 @@ if we writ project using JPA stuff, we can easily shift from hibernate to ibitis
 thats it...
 
 
---
+-- 
+EntityManager is underlying work of JPARepository
+
+persists() -> save object
+find() -> select an object
+createquery() -> write query select multiple objects or any kind of queries
+merge() -> update object
+remove() -> delete object
+
 
 
 
