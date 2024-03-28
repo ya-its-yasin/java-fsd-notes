@@ -1,0 +1,26 @@
+
+Spring security provides features to authentication and authorization for our application.
+
+adding spring boot starter security in the pom file will automatically secure all endpoints of the application.
+
+there are possibilities of many ways for Auths
+1. in memory 
+2. jdbc
+3. LDAP
+4. custom/plugin
+
+passwords are stroed as 
+{noop}test123
+{bcrypt}encryptedpassword
+
+JDBC auth:
+have two tables in database:
+1. users (username, password, enabled) 
+2. authorities (username, authority) -> authority means roles
+
+@Bean
+public UserDetailsManager userDetailsManager(DataSource dataSource){
+	return new JdbcUserDetailsManager(dataSource);
+}
+
+thats it, springboot will take care of all the authentication and authorization with the use of these two tables and 3 lines of config code.
