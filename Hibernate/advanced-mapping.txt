@@ -1,0 +1,71 @@
+There are four mappings..
+
+1. one to one
+2. one to many
+3. many to one
+4. many to many
+
+Cascade:
+do the same operation in related table too
+
+cascade.all
+cascade.persist
+cascade.delete 
+etcetc
+we can fix cascade operation by ourself
+only that will happen
+
+@OneToOne(cascade= CascadeType.ALL)
+
+@OneToOne(cascade={CascadeType.remove, cascadeType.detach})
+private InstructorDetail instDet;
+
+this above will give us uni directional mapping,
+
+if we make changes in instructor,, the changes will happen in instructoor_detail..
+but what about the reverse case?
+
+then we have to use bi-directional mapping..
+
+create one more variable in instructor-details table mapping
+@oneToOne(mappedBy=instructorDetail, casecade=CasecadeType.ALL)
+private Instructor ins;
+
+now if we make changes or delete in ins-details table, the changes will also casecade in ins table
+
+------------
+
+Eager vs lazy loading
+
+if ccourse has maany students mapped inanother table..
+then loading one course willl load all its students too..
+that is a big amout and it is called eager loading
+this reduces performance of the application
+
+
+best pracice in industry is..
+only load data when absolutely needed..
+lazy loading.. tada....
+
+this helps to load the course alone first,,
+and load teh students on demand if needed.
+
+FetchType.EAGER, FetchType.LAZY
+
+@OneToMany(fetch=FetchType.LAZY)
+
+by the same way we have other mappinngs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
