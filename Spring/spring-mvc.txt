@@ -1,0 +1,5 @@
+
+Thymeleaf
+-> java templating engine
+-> used to generate httml for webapps
+-> they can access java objects in html like file

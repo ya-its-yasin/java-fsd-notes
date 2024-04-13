@@ -1,0 +1,28 @@
+spring profile is a feature fo spring to support environment specific configurations in a better way.
+
+application-<profileName>.yml/properties
+
+spring.profiles.active=test
+->this allow to set profiles and different properties for each env in diff prop files..
+
+then, one more thing..
+we can decide the classes which are to be loaded in which profile..
+for example
+
+@Repository
+@Profile("prod")
+public class DataSourceBean{
+	
+}
+
+@Repository
+@Profile("dev")
+public class LocalDataSourceBean{
+	
+}
+
+by setting the spring profile in the properties file..
+we can decide which class needs to be loaded at which time.
+
+
+
