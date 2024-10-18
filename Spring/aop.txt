@@ -3,14 +3,32 @@ AOP is not developing software...
 it is like wrapping the softwares in to another layer...
 it will monitor the application activities.. based on pointcut
 
+main concept is taking all logging code and centralize in an aspect
 
 AOP is based on a design pattern - proxy
 
-aspect is considered as an advice
- pointcut is a bridge between an advice and our code
 
-main concept is taking all logging code and centralize in an aspect
+aspect
+-> class that we create for aop is as Aspect
 
+advice
+-> log method that we write in aspect class
+
+Join point
+-> the real methods to which the advice methods are pointing too
+
+pointcut
+-> is a bridge between an advice and our code
+
+weaving
+-> linking happens in run time
+
+types of advice:
+-> Before advice
+-> After returning advice
+-> After throwing advice
+-> after (finally) advice
+-> Around advice
 
 
 

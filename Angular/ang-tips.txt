@@ -1,0 +1,9 @@
+if facing issue in running npm commands from vs code terminal, run the below command
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+create new project:
+https://angular.dev/installation
+
+npm install -g @angular/cli

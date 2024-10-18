@@ -12,6 +12,21 @@ spring has learnt everything with java, and it produced spring boot
 
 spring boot become very famous because of this main reason, it became made for each other with  'Microservices'
 
+Components of Spring boot,
+- Spring boot starter
+- Auto Configuration
+- Spring boot Actuator
+- Embedded server
+- Spring boot DevTools
+
+
+Advantages of Spring boot:
+- stand alone and quick start
+- starter code
+- less configuration
+- reduced cost and development time
+
+
 spring starter -> https://start.spring.io/
 
 ultimately, spring boot is also a DispatcherServlet only, which handles all the servlets and containers

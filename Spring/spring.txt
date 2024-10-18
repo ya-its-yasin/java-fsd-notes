@@ -20,6 +20,8 @@ getBean();
 -> then it should belong to some library..
 -> that library is called 'spring-context'
 
+Beans are objects that are managed by Spring framework
+
 // creating a context mothod to get all beans from the beans.xml file
 ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml"); 
 
