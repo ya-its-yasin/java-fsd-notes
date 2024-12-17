@@ -1,10 +1,3 @@
-2. RestTemplae
-4. microservices -> Eureka things
-6. design patterns
-
-certifications:
-1. oracle java certification
-2. testing 
-3. agile related certificats
-4. IBM uml certificates
-5. togaf architect certificates
+-- jquery
+-- Enum usage
+-- how to break singleton
