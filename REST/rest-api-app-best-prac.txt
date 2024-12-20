@@ -1,9 +1,3 @@
-
-com.tcs.rest.resource -> has all POJOs
-com.tcs.rest.resources -> has all APIs (Controllers)
-com.tcs.rest.repository -> has all JPA repos connecting with database
-com.tcs.rest.service -> has service methods for business logics, and it connects with repositories
-
 recommended way from internet:
 src/main/java
     +- com
