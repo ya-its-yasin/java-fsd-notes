@@ -1,8 +1,0 @@
-swagger allows you to describe structure if API so that machines can read them.
-
-
-<dependency>
-	<groupId>org.springdoc</groupId>
-	<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-	<version>2.0.3</version>
-</dependency>
